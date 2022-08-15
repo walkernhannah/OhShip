@@ -72,27 +72,26 @@ _JButtons & Their ActionListeners_
 - _Ship (class)_ = creates a ship object, assigns and displays variables for each ship like health, name, location, and hits
 - _PirateShip (class)_ = extends Ship to display the ship icon, lives/health, and name 
 - _ship_ = instantiation of each PirateShip (like an object placeholder for the 10 generated) 
-- _ships (array)_ = holds entire fleet for the 
+- _ships (array)_ = holds all 10 ships of fleet + allows for fleet to have numeric limit + instatiates each ship object and allows for reference/aggregation of indiividual variables assigned 
 
 ### Integers
-- _totalvolleys_ 
-- _volleys_
-- _shipsleft_
-- _shipsdown_
-- _fleetmax_
-- _fleetmin_
+- _totalvolleys_ = _refer to Fields section above_ 
+- _volleys_ = number of (clicks) per 'fire' 
+- _shipsleft_ = _refer to Fields section above_ 
+- _shipsdown_ = _refer to Fields section above_ 
+- _fleetmax_ = _refer to Fields section above_ 
+- _fleetmin_ = _refer to Fields section above_ 
 
-- _health_
-- _hitstaken_
-- _totalhitstaken_ 
-
+- _health_ = individual ship health
+- _hitstaken_ = hits taken per 'fire' by an individual ship 
+- _totalhitstaken_ = total hits taken by an individual ship in a game 
 
 ### Doubles
-- _totalhealth_
-- _fleetavg_ 
+- _totalhealth_ = _refer to Fields section above_ 
+- _fleetavg_ = _refer to Fields section above_ 
 
 ### Other
-- _floating_ = boolean variable *
+- _floating_ = boolean variable that 
 - _clip, clap, clop_ = sound variables holding the sound clips that are played in different ActionListeners
 
 ***
