@@ -29,8 +29,77 @@ Upon running the program, you should see a blue window of 3 top-aligned buttons,
 8. Avg = average health of fleet
 
 ### Other
-1. When a ship is hit, its health (displayed by the stars under each ship) will decrease until hitting zero and turning the ship icon into an 'X' 
+1. When a ship is hit, its health (displayed by the stars under each ship) will decrease until hitting zero and turning the ship icon from the ship .png into an 'X' 
 
 ***
 
-### Code
+## Code
+Before running, make sure: 
+1. That all packages are imported (lines 1-28)
+2. That the following FOUR files are downloaded and accessible: cannon.wav, sinking.wav, softclick.wav, shippy.png
+3. That the display font, 'Caribbean', is downloaded
+
+
+### Overview
+There are four general methods that comprise the main application function, LabThree(). 
+1. load() = generates the fleet report, game panel, and button panel + randomizes individual locations of each ship + reads and stores sound files so they can be played
+2. resetVariables() = clears the game panel & fleet report, resets all numbers, and generates a new array of ships to be placed 
+3. populateReport() = makes the secondary 'Fleet Report' window visible, as well as reruns to display up-to-date stats of each ship 
+4. end() = similar to resetVariables, it resets the game panel & fleet report, but occurs either once the game has ended or upon pressing the 'Reset' button 
+
+
+## Variables 
+
+### Java Containers 
+_JPanels/JFrames_
+- gamePanel = window that holds the game, ships, and buttons
+- jp = area attached to the top of the game panel that holds the three buttons 
+- jf = window that holds the fleetsummary 
+
+_JTextAreas/JLabels_
+- fleetsummary 
+- l = banner attached to the bottom of the game panel that displays 'totalvolleys' and 'shipsleft' in the game 
+- top(toplabel) = label that holds String 'toplabel' which displays the top header of the Fleet Report 
+- bottom(bottomlabel) = label that holds String 'bottomlabel' which displays aggregations such as 'fleetmin', 'fleetmax', 'fleetavg' on the bottom of the Fleet Report
+
+_JButtons & Their ActionListeners_
+- _fire_ = sends a volley of cannons to random positions 
+- _reset_ = clears the game
+- _fleetreport_ = generates a fleet report 
+- _replay_ = resets the game 
+
+### Objects 
+- _Ship (class)_ = creates a ship object, assigns and displays variables for each ship like health, name, location, and hits
+- _PirateShip (class)_ = extends Ship to display the ship icon, lives/health, and name 
+- _ship_ = instantiation of each PirateShip (like an object placeholder for the 10 generated) 
+- _ships (array)_ = holds entire fleet for the 
+
+### Integers
+- _totalvolleys_ 
+- _volleys_
+- _shipsleft_
+- _shipsdown_
+- _fleetmax_
+- _fleetmin_
+
+- _health_
+- _hitstaken_
+- _totalhitstaken_ 
+
+
+### Doubles
+- _totalhealth_
+- _fleetavg_ 
+
+### Other
+- _floating_ = boolean variable *
+- _clip, clap, clop_ = sound variables holding the sound clips that are played in different ActionListeners
+
+***
+
+## Logic and Loops
+
+
+
+
+
